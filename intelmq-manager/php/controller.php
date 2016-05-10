@@ -36,7 +36,7 @@
             $id = '';
         }
         
-        $arguments = '--bot ' . $action . ' ' . escapeshellcmd($id) . ' --type json';
+        $arguments = '--bot ' . $action . ' --id=' . escapeshellcmd($id) . ' --type json';
     } else if ($scope == 'log') {
         if (!array_key_exists('lines', $_GET)) {
             die("Missing 'lines' argument on request." || !preg_match($lines_regex, $_GET['lines']));
